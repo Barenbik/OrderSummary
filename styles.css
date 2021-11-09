@@ -1,8 +1,90 @@
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+* {
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%); 
+body,
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  border: 1px solid grey;
+  border-radius: 20px;
+  margin: 60px 25px;
+  background-image: url(images/pattern-background-mobile.svg);
+  background-size: cover;
+}
+
+.content {
+  padding: 1rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 0 0 18px 18px;
+}
+
+.plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #f8f9fe;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin: 0 2rem 2rem;
+}
+
+.description,
+.plan {
+  color: #8b91a5;
+  line-height: 1.8rem;
+}
+
+.description,
+.plan,
+button {
+  font-size: 1rem;
+}
+
+h1,
+#annual-plan-text,
+#cancel {
+  color: #1f2f56;
+}
+
+#person-image {
+  width: 100%;
+  border-radius: 18px 18px 0 0;
+  background-color: #0000C9;
+}
+
+#proceed {
+  background-color: #382ae1;
+  color: white;
+  border-radius: 16px;
+}
+
+#cancel {
+  background-color: transparent;
+  color: #8b91a5;
+  font-weight: bold;
+}
+
+#proceed,
+#cancel {
+  padding: 1.25rem;
+  border-style: none;
+}
+
+#annual-plan-text {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 375px) {
+  
 }
