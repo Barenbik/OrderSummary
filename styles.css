@@ -3,18 +3,27 @@
   font-family: "Red Hat Display", sans-serif;
 }
 
-body,
+body {
+  background-image: url(images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.card,
 .buttons {
   display: flex;
   flex-direction: column;
 }
 
-body {
+.card {
   border: 1px solid grey;
   border-radius: 20px;
-  margin: 60px 25px;
-  background-image: url(images/pattern-background-mobile.svg);
-  background-size: cover;
+  margin: auto;
+  justify-content: center;
 }
 
 .content {
@@ -26,7 +35,7 @@ body {
 
 .plan {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 1.5rem;
   background-color: #f8f9fe;
@@ -45,6 +54,10 @@ body {
   line-height: 1.8rem;
 }
 
+.price {
+  margin-right: auto;
+}
+
 .description,
 .plan,
 button {
@@ -60,7 +73,7 @@ h1,
 #person-image {
   width: 100%;
   border-radius: 18px 18px 0 0;
-  background-color: #0000C9;
+  background-color: #0000c9;
 }
 
 #proceed {
@@ -69,10 +82,20 @@ h1,
   border-radius: 16px;
 }
 
+#proceed:hover {
+  cursor: pointer;
+  background-color: #766df2;
+}
+
 #cancel {
   background-color: transparent;
   color: #8b91a5;
   font-weight: bold;
+}
+
+#cancel:hover {
+  cursor: pointer;
+  color: #1e2f56;
 }
 
 #proceed,
@@ -85,6 +108,21 @@ h1,
   font-weight: bold;
 }
 
+#music-icon {
+  margin-right: 1.5rem;
+}
+
 @media screen and (min-width: 375px) {
-  
+  body {
+    background-image: url(images/pattern-background-desktop.svg);
+    background-size: contain;
+  }
+
+  .card {
+    max-width: 425px;
+  }
+
+  .content {
+    padding: 2rem;
+  }
 }
